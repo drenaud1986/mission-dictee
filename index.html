@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6c5ce7">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mission Dictée">
+<meta name="description" content="Les mots de dictée de CE1 à réviser en s'amusant.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>Mission Dictée</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header class="hero">
+    <button class="buddy" id="buddy" type="button" aria-label="Parler au compagnon">🥚</button>
+    <div class="hero-info">
+      <h1 id="title">La mission Dictée</h1>
+      <div class="buddy-line"><strong id="buddyName">Draco</strong> · niveau <span id="level">1</span> <span class="muted" id="stageName"></span></div>
+      <div class="xpbar" aria-hidden="true"><span id="xpFill"></span></div>
+      <div class="bubble" id="bubble">Salut ! On s'entraîne ensemble ?</div>
+    </div>
+    <div class="hero-side">
+      <div class="stats">
+        <div class="stat" title="Étoiles gagnées">⭐ <span id="xp">0</span></div>
+        <div class="stat" title="Bonnes réponses d'affilée">🔥 <span id="streak">0</span></div>
+      </div>
+      <span class="pill" id="ctxPill">CE1</span>
+    </div>
+  </header>
+
+  <nav aria-label="Navigation">
+    <button class="tab active" data-view="home">🎮 Jouer</button>
+    <button class="tab" data-view="lists">📋 Mes listes</button>
+    <button class="tab" data-view="stats">📊 Progrès</button>
+    <button class="tab" data-view="settings">⚙️ Réglages</button>
+  </nav>
+
+  <section class="panel" id="view"></section>
+  <footer>Un petit entraînement à la fois : tu progresses à chaque mot ! 💪</footer>
+</main>
+<div id="fx" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
