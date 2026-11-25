@@ -1,6 +1,6 @@
 // Service worker : l'appli fonctionne hors ligne, et récupère les mises à jour dès qu'il y a du réseau.
-const CACHE = 'mission-dictee-v4.0.0';
-const ASSETS = ['./', 'index.html', 'styles.css', 'app.js', 'data.js', 'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'];
+const CACHE = 'mission-dictee-v5.0.0';
+const ASSETS = ['./', 'index.html', 'styles.css', 'data.js', 'core.js', 'sound.js', 'voice.js', 'rewards.js', 'games.js', 'app.js', 'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'];
 
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS))); self.skipWaiting(); });
 self.addEventListener('activate', e => {

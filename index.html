@@ -17,7 +17,11 @@
 <body>
 <main>
   <header class="hero">
-    <button class="buddy" id="buddy" type="button" aria-label="Parler au compagnon">🥚</button>
+    <div class="buddy-wrap">
+      <button class="buddy" id="buddy" type="button" aria-label="Parler au compagnon">🥚</button>
+      <span class="acc" id="acc" aria-hidden="true"></span>
+      <span class="zzz" id="zzz" hidden aria-hidden="true">💤</span>
+    </div>
     <div class="hero-info">
       <h1 id="title">La mission Dictée</h1>
       <div class="buddy-line"><strong id="buddyName">Draco</strong> · niveau <span id="level">1</span> <span class="muted" id="stageName"></span></div>
@@ -27,7 +31,8 @@
     <div class="hero-side">
       <div class="stats">
         <div class="stat" title="Étoiles gagnées">⭐ <span id="xp">0</span></div>
-        <div class="stat" title="Bonnes réponses d'affilée">🔥 <span id="streak">0</span></div>
+        <div class="stat" title="Pièces pour la boutique">🪙 <span id="coins">0</span></div>
+        <div class="stat" title="Jours d'entraînement d'affilée">🔥 <span id="flames">0</span></div>
       </div>
       <span class="pill" id="ctxPill">CE1</span>
     </div>
@@ -36,6 +41,7 @@
   <nav aria-label="Navigation">
     <button class="tab active" data-view="home">🎮 Jouer</button>
     <button class="tab" data-view="lists">📋 Mes listes</button>
+    <button class="tab" data-view="draco">🐉 Draco</button>
     <button class="tab" data-view="stats">📊 Progrès</button>
     <button class="tab" data-view="settings">⚙️ Réglages</button>
   </nav>
@@ -45,6 +51,11 @@
 </main>
 <div id="fx" aria-live="polite"></div>
 <script src="data.js"></script>
+<script src="core.js"></script>
+<script src="sound.js"></script>
+<script src="voice.js"></script>
+<script src="rewards.js"></script>
+<script src="games.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
